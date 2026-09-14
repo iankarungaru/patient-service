@@ -15,8 +15,8 @@ import (
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/health", handlers.HealthHandler)
-	mux.HandleFunc("/products", handlers.ProductsHandler)
-	mux.HandleFunc("/products/{id}", handlers.ProductDetailHandler)
+	mux.HandleFunc("/patients", handlers.PatientsHandler)
+	mux.HandleFunc("/patients/{id}", handlers.PatientDetailHandler)
     
 	fmt.Println("Starting server on 8080...")
 	http.ListenAndServe(":8080", handlers.LoggingMiddleware(mux))
@@ -26,6 +26,4 @@ func main() {
 
 
 
-func ApplyDiscount(price float64, discount float64) float64 {
-	return price - (price * discount / 100)
-}
+
