@@ -11,7 +11,7 @@ import (
 func main() {
 
 	db.Connect()
-	db.TestQuery()
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/health", handlers.HealthHandler)
 	mux.HandleFunc("/patients", handlers.PatientsHandler)
