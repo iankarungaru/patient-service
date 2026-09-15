@@ -1,8 +1,8 @@
 package models
 
 type Patient struct {
-	ID    int    `json:"id"`
-	Name  string `json:"name"`
-	DOB   string `json:"dob"`
-	Phone string `json:"phone"`
+	ID        int    `json:"id"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Phone     string `json:"phone"`
 }

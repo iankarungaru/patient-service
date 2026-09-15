@@ -7,10 +7,11 @@ import (
 
 	"github.com/iankarungaru/patient-service/models"
 )
+
 var patients = []models.Patient{
-	{ID: 1, Name: "Alice Wanjiru", DOB: "1990-04-12", Phone: "0712345678"},
-	{ID: 2, Name: "Brian Otieno", DOB: "1985-11-03", Phone: "0723456789"},
-	{ID: 3, Name: "Grace Mwikali", DOB: "2001-07-22", Phone: "0734567890"},
+	{ID: 1, FirstName: "Alice", LastName: "Wanjiru", Phone: "0712345678"},
+	{ID: 2, FirstName: "Brian", LastName: "Otieno", Phone: "0723456789"},
+	{ID: 3, FirstName: "Grace", LastName: "Mwikali", Phone: "0734567890"},
 }
 
 func PatientsHandler(w http.ResponseWriter, r *http.Request) {
